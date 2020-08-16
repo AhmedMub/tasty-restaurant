@@ -1,0 +1,566 @@
+@import "Variables";
+
+@media (max-width: 1199.98px) {
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .our-story {
+    .story-content {
+      .story-right {
+        p {
+          width: 25rem;
+        }
+      }
+      .story-left {
+        img:first-child {
+          height: 21rem
+        }
+      }
+    }
+  }
+  .reservation-form {
+    .left-inner-content {
+      .margin-fix {
+        margin-left: 1rem;
+      }
+    }
+  }
+  footer {
+    .footer-contact {
+      .item3 {
+        overflow: hidden;
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+
+  header {
+    .slider-text {
+      .text1 {
+        h2 {
+          font-size: 1.5rem;
+        }
+        &::before, &::after {
+          width: 25rem
+        }
+      }
+    }
+    .menu {
+      ul {
+        li {
+          padding: 27px 0px;
+        }
+      }
+    }
+  }
+  .our-story {
+    .story-content {
+      .story-right {
+        h3 {
+          margin-left: 2rem;
+        }
+        p {
+          width: 21rem;
+          margin-left: 2rem;
+        }
+      }
+      .story-left {
+        img:first-child {
+          height: 100%
+        }
+      }
+    }
+  }
+  .today-special {
+    .special-gallery {
+      .special-inner {
+        .card {
+          h4 {
+            font-size: $secSpecialsize;
+          }
+        }
+      }
+    }
+  }
+  .our-menu {
+    .our-menu-content {
+      .food-menu {
+        .inner-menu {
+          padding: 0 14px;
+        }
+      }
+    }
+  }
+  .statistics {
+    .statis-content {
+      .statis-inner {
+        p {
+          font-size: $secStatisSize;
+        }
+      }
+    }
+  }
+  .gallery {
+    padding: 0;
+  }
+  footer {
+    .footer-contact {
+      .item1 {
+        span {
+          i {
+            width: 34px;
+            height: 34px;
+            padding: 7px 0;
+          }
+        }
+      }
+    }
+    .item3 {
+      input, textarea {
+        width: 13rem!important
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+
+header {
+  .slider-text {
+    .text1 {
+      &::before, &::after {
+        width: 22rem
+      }
+    }
+  }
+  .active-menu {
+    border: none;
+  }
+  .menu {
+    display: block;
+    h2 {
+      display: inline-block;
+      padding: 2rem 0;
+    }
+    .menu-btn {
+      display: block;
+      float: right;
+      width: 20px;
+      height: 20px;
+      margin: 2.4rem 0;
+      &:before {
+        content: "\f0c9";
+        font-family: fontAwesome;
+        font-size: 25px;
+        color: $whiteclr;
+      }
+    }
+    .activate-btn:before {
+      content: "\f00d"!important;
+    }
+    nav {
+
+    }
+    ul {
+      display: none;
+      li {
+        display: block;
+        padding: 0;
+        margin: auto;
+        text-align: center;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+    .active-ul {
+      display: block;
+    }
+  }
+}
+.our-story {
+  .container > p {
+    width: $smallwidthP;
+  }
+  .story-content {
+    .story-right {
+      h3 {
+        margin-left: 1rem;
+      }
+      p {
+        width: 15rem;
+        margin-left: 1rem;
+        font-size: $secStatisSize;
+      }
+      .restorans-time {
+        .times {
+          div {
+            margin-right: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+.today-special {
+  .container > p {
+    width: $smallwidthP;
+  }
+  .special-gallery {
+    .special-inner {
+      .card {
+        h4 {
+          font-size: 11px;
+          padding-top: .5rem;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.our-menu {
+  .container > p {
+    width: $smallwidthP;
+  }
+}
+.reservation-form {
+  .left-inner-content {
+    h2 {
+      font-size: 25px;
+      margin-top: 3rem;
+    }
+    p {
+      width: 15rem;
+      font-size: $secStatisSize
+    }
+    form {
+      input {
+        width: 15rem;
+      }
+      .reserv-time {
+        display: block;
+        width: auto;
+        overflow: auto;
+      }
+    }
+  }
+}
+.our-team {
+  .container > p {
+    width: $smallwidthP;
+  }
+   .team-content {
+     .team-member {
+       h4 {
+         font-size: $secStatisSize;
+       }
+       small {
+         font-size: $secSpecialsize;
+       }
+       p {
+         font-size: $secStatisSize;
+       }
+     }
+   }
+}
+.statistics {
+  .statis-content {
+    .statis-inner {
+      h4 {
+        font-size: $secStatisSize;
+      }
+      p {
+        font-size: $fontSize10;
+      }
+    }
+  }
+}
+.gallery {
+  p {
+    width: $smallwidthP;
+  }
+}
+footer {
+  .container > p {
+    width: $smallwidthP;
+  }
+  .footer-contact {
+    h3 {
+      font-size: 20px;
+    }
+    .item1 {
+      p {
+        width: 11rem;
+      }
+      span {
+        font-size: 16px;
+        i {
+          width: auto;
+          height: 0;
+          padding: 0;
+          border: 0;
+          margin-right: 9px;
+        }
+      }
+    }
+    .item3 {
+      input, textarea {
+        width: 10rem!important
+      }
+      button {
+        padding: 7px 15px
+      }
+    }
+  }
+}
+}
+@media (max-width: 575.98px) {
+  header {
+    .slider-text {
+      .text1 {
+        h2 {
+          font-size: 30px;
+        }
+        &::before, &::after {
+          width: 15rem
+        }
+      }
+    }
+    .prev, .next {
+      display: none;
+    }
+  }
+  .our-story {
+    padding: $secPaddingSmall;
+    .story-fix {
+      padding-top: 1rem;
+    }
+    .container > h2 {
+      font-size:$verysmallHeading;
+    }
+    .container > p {
+      width: 10rem;
+      font-size: $fontSize11;
+      padding-bottom: 2rem;
+    }
+    .story-content {
+      display: block;
+      text-align: center;
+      .story-right {
+        width: 100%;
+        > h3 {
+          margin:0;
+          font-size: $verysmallHeading;
+          margin-top: 1rem;
+        }
+        p {
+          width: 100%;
+          margin-left: 0;
+          font-size: $secStatisSize;
+          padding-bottom: .2rem;
+        }
+        .restorans-time {
+          .times {
+            display: block;
+            div {
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      .story-left {
+        display: block;
+        width: 100%;
+        img:first-child {
+          width: 100%;
+          padding: 0;
+        }
+        img:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  .today-special {
+    padding: $secPaddingSmall;
+    h2 {
+      font-size: $verysmallHeading;
+    }
+    .container > p {
+      width: auto;
+      font-size: $fontSize13;
+      margin-bottom: -15px;
+    }
+    .special-gallery {
+      .special-inner {
+        display: block;
+        padding-bottom: 1rem;
+        div {
+          width: 100%;
+        }
+        .card {
+          padding-bottom: 12px;
+          h4 {
+            font-size: 14px;
+            margin:  -3px 0;
+          }
+          p {
+            padding: 0 1px;
+            font-size: $fontSize13;
+          }
+        }
+      }
+    }
+  }
+  .our-menu {
+    padding: $secPaddingSmall;
+    h2 {
+      font-size: $verysmallHeading;
+    }
+    .container > p {
+      width: auto;
+      font-size: $fontSize13
+    }
+    .our-menu-content {
+      .menu-btns {
+        button {
+          margin-bottom: 5px;
+        }
+        .active-btn {
+          border: 1px solid #ddd;
+        }
+      }
+      .food-menu {
+        display: block;
+        .inner-menu {
+          .prices {
+            .meal-info {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reservation-form {
+    padding: $secPaddingSmall;
+    display: block;
+    text-align: center;
+    .left-inner-content {
+      width: 100%;
+      h2 {
+        font-size: 23px;
+        padding-top: 3rem;
+        &::after {
+          margin: auto;
+        }
+      }
+      p {
+        width: 95%;
+      }
+      form {
+        width: 100%;
+        input {
+          width: 90%;
+        }
+        .reserv-time {
+          div {
+            input {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .right-inner-content {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .our-team {
+    h2 {
+      font-size: 23px;
+    }
+    .container > p {
+      width: auto;
+    }
+    .team-content {
+      display: block;
+      .team-member {
+        h4 {
+          font-size: 15px;
+        }
+      }
+      .team-member:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+  .statistics {
+    padding: $secPaddingSmall;
+    .statis-content {
+      flex-wrap: wrap;
+      .statis-inner {
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
+        p {
+          padding-bottom: 0;
+        }
+        span {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .gallery {
+    text-align: center;
+    h2 {
+      font-size: 23px;
+    }
+    p {
+      width: auto;
+      padding: 0;
+    }
+    .spans {
+      padding: 25px 10px;
+    }
+    .gallery-images {
+      display: block;
+    }
+  }
+  footer {
+    > h2 {
+      font-size: $verysmallHeading;
+    }
+    .container > p {
+      width: auto;
+    }
+    .footer-contact {
+      display: block;
+      h3 {
+        font-size: 25px;
+      }
+      .item1, .item2, .item3 {
+        width: auto;
+      }
+      .item3 {
+        input, textarea {
+          width: 22rem!important;
+          display: block;
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+
+  .hidden-in-mobile {
+    display: none!important;
+  }
+
+}

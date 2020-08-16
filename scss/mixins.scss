@@ -1,0 +1,51 @@
+@mixin prevNext() {
+  position: absolute;
+  top: 52%;
+  color: $sliderHclr;
+  background-color: transparent;
+  padding: 5px 13px;
+  border: 1px solid $mainclr;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@mixin secHeading() {
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 2.2rem;
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 2.5px solid #f4b350;
+    margin: auto;
+    text-align: center;
+    width: 35px;
+    padding-top: 16px;
+  }
+}
+@mixin secP() {
+  color: $pclr;
+  font-size: .9rem;
+  width: 47rem;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+@mixin btn() {
+  margin: 2rem 0;
+  background: transparent;
+  color: #f4b350;
+  border: 1.4px solid $mainclr;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 2px;
+}
+@mixin btnHover() {
+  &:hover {
+    background-color: $mainclr;
+    border-color: $mainclr;
+    color: #000;
+    transition: all .4s ease-in-out;
+  }
+}
