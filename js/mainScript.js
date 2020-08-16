@@ -3,6 +3,48 @@
 /*global alert, confirm, console, prompt*/
 /*jshint esversion: 6 */
 
+//spinner
+const spinner = document.getElementById('spinner');
+
+window.onload  = function (){
+  'use static';
+
+ setTimeout(function () {
+
+   spinner.remove();
+
+   document.body.style.overflow = "auto";
+ }, 200);
+
+ setTimeout(function() {this.scrollTo(0, 0);},200);
+};
+
+//scroll top
+const scrollBtn = document.getElementById('scrollUp');
+
+window.onscroll = function () {
+  "use strict";
+
+  if (this.pageYOffset >= 500) {
+
+    scrollBtn.style.opacity = "1";
+  } else {
+
+    scrollBtn.style.opacity = "0";
+  }
+};
+
+function scrollToTop(scrollDuration) {
+ var scrollStep = -window.scrollY / (scrollDuration / 15),
+   scrollInterval = setInterval(function(){
+   if ( window.scrollY != 0 ) {
+       window.scrollBy( 0, scrollStep );
+   }
+   else clearInterval(scrollInterval);
+},15);
+}
+
+
 //Slider height
 (function slideH() {
   let windowH = window.innerHeight,

@@ -14,6 +14,7 @@ font-family: 'Dancing Script', cursive;
 //..........start My framework
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 .container {
   width: $fullScreen;
@@ -992,3 +993,63 @@ overflow: hidden;
   }
 }
 // ===========* end footer *===========
+// ===========* scroll top *===========
+.scrollUp {
+  position: fixed;
+  bottom: 41px;
+  right: 35px;
+  z-index: 999;
+  width: 50px;
+  opacity: 0;
+  transition: opacity .8s ease-in-out;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}
+// ===========* scroll top *===========
+// ===========* spinner *===========
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: $navUlclr;
+
+  .lds-hourglass {
+    display: inline-block;
+    position: fixed;
+    top: 38%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid $mainclr;
+    border-color: $mainclr transparent $mainclr transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+}
