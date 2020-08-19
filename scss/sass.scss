@@ -14,7 +14,7 @@ font-family: 'Dancing Script', cursive;
 //..........start My framework
 body {
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  // overflow: hidden;
 }
 .container {
   width: $fullScreen;
@@ -37,6 +37,8 @@ body {
 $slider: slide1 slide2 slide3 slide4 slide5;
 
 header {
+  transition: all 1s ease-in-out;
+  
   .slider {
     position: relative;
     top: 0;
@@ -90,12 +92,11 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     .text1 h2 {
-      @extend %sliderFont;
+      font-family: 'Kaushan Script', cursive;
       text-transform: capitalize;
       font-size: $sliderFontSiz;
-      font-style: italic;
       color: $whiteclr;
-      animation: text-flicker-in-glow 4s linear both;
+      animation: text-flicker-in-glow 1s linear both;
     }
     .remove-title {
       display: none
@@ -435,6 +436,14 @@ header {
     color: $mainclr!important
   }
 }
+.nav-on-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 333;
+  width: 100%;
+  background-color: #222222f2;
+}
 // ===========* end header *===========
 // ===========* Start our story *===========
 .our-story {
@@ -457,6 +466,7 @@ header {
       width: 50%;
       display: flex;
       justify-content: flex-start;
+      opacity: 1;
       img:first-child {
         height: 24rem;
         margin: auto;

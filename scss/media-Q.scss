@@ -142,14 +142,14 @@ header {
     display: block;
     h2 {
       display: inline-block;
-      padding: 2rem 0;
+      padding: 22px 0;
     }
     .menu-btn {
       display: block;
       float: right;
       width: 20px;
       height: 20px;
-      margin: 2.4rem 0;
+      margin: 26px 0;
       &:before {
         content: "\f0c9";
         font-family: fontAwesome;
@@ -159,9 +159,6 @@ header {
     }
     .activate-btn:before {
       content: "\f00d"!important;
-    }
-    nav {
-
     }
     ul {
       display: none;

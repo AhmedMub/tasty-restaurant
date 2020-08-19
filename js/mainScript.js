@@ -6,18 +6,18 @@
 //spinner
 const spinner = document.getElementById('spinner');
 
-window.onload  = function (){
-  'use static';
-
- setTimeout(function () {
-
-   spinner.remove();
-
-   document.body.style.overflow = "auto";
- }, 200);
-
- setTimeout(function() {this.scrollTo(0, 0);},200);
-};
+// window.onload  = function (){
+//   'use static';
+//
+//  setTimeout(function () {
+//
+//    spinner.remove();
+//
+//    document.body.style.overflow = "auto";
+//  }, 200);
+//
+//  setTimeout(function() {this.scrollTo(0, 0);},200);
+// };
 
 //scroll top
 const scrollBtn = document.getElementById('scrollUp');
@@ -164,6 +164,7 @@ prev.onclick = function () {
 //click indicators
 for (let i = 0; i < ulArray.length; i++) {
 
+
   ulArray[i].onclick = function () {
 
     activeSlide = parseInt(this.getAttribute('data-slide'));
@@ -171,18 +172,17 @@ for (let i = 0; i < ulArray.length; i++) {
   };
 }
 
+
 //set time interval fn
 setInterval( () => {
 
-  activeSlide += 1;
-  AddActive();
+    let goActive = Math.ceil(Math.random() * slidesLength);
 
-  if (activeSlide == slidesLength) {
-
-    activeSlide = 0;
-  }
+    activeSlide = goActive;
+    AddActive();
 
 }, 8000);
+
 
 // slider text
 
@@ -203,7 +203,7 @@ function AddRemoveClass() {
 
     e.classList.add('remove-title');
 
-ClasshasRemoved();
+    ClasshasRemoved();
   });
 }
 AddRemoveClass();
@@ -221,6 +221,31 @@ setInterval( () => {
 }, 8000);
 
 
+//scrolled navbar
+const navbar = document.querySelector('#navbar');
+
+const slider = document.querySelector('.slider');
+
+const option = {};
+
+const naveobserver = new IntersectionObserver(function (entries, naveobserver) {
+
+  entries.forEach( entry => {
+
+    if (!entry.isIntersecting) {
+
+      navbar.classList.add('nav-on-scroll');
+
+    } else {
+
+      navbar.classList.remove('nav-on-scroll');
+    }
+  });
+
+}, option);
+
+naveobserver.observe(slider);
+
 // nav bar btn
 const navBtn = document.getElementById('navBtn');
 const navUl = document.getElementById('navUl');
@@ -235,7 +260,8 @@ navBtn.onclick = function () {
 //toggle menu btns
 const menuBtnsArray = Array.from(document.querySelectorAll('#menuBtns button'));
 
-for (let i = 0; i <= menuBtnsArray.length; i++) {
+for (let i = 0; i < menuBtnsArray.length; i++) {
+
 
   menuBtnsArray[i].onclick = function () {
 
